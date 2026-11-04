@@ -3,20 +3,57 @@
     <head> 
         <title>Advanced HTML notes</title>
         <meta charset="UTF-8">
+        <style> 
+            /* Cascading style sheets 
+            1.selector 
+            2 declaration 
+                a.propert 
+                b. value 
+            */
+            body{
+                color:#f33232; 
+                background-color:rgb(202, 250, 240);
+            }
+            h1{
+                color:rgb(20, 114, 91);
+                text-decoration: underline;
+                text-align:center;
+            }
+            #even{
+                color:rgba(17, 138, 102, 0.295);
+            }
+            .numbered{
+                font-size: 20px;
+            }
+            ul{
+                background-color:rgba(4, 65, 52, 0.432);
+                border-radius: 4px;
+                width: 25%;
+                height: 100px;
+                font-size: 1em;
+                border: dotted 2px rgb(161, 50, 30);
+            }
+            #Johnny-Depp{
+                width:50%;
+            }
+            #Johnny-Deppp{
+                width:300px
+            }
+        </style>
     </head>
     <body>
         <h1>Advanced HTML notes</h1>
         <h3>Lists: </h3>
-        <ol type ="I"> 
+        <ol type ="I" class="numbered"> 
             <li>This is the first thing</li>
-            <li> This is the second thing</li>
+            <li id="even"> This is the second thing</li>
             <li> This is the third thing</li>
         </ol>
         <ul>
             <li><a href="https://www.notablebiographies.com/news/images/unmk_01_img0014.jpg">Orlando Bloom</a></li>
             <li>Banana</li>
-            <li>Orange</li>
-            <li>Kiwi</li>
+            <li id="even">Orange</li>
+            <liid="even">Kiwi</li>
         </ul>
         <dl> 
             <dt>Fall</dt>
@@ -29,9 +66,9 @@
         </dl>
 
         <h3>Attributes:</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiwXjc_KB9h0cV0QND3wNoc0E5iwQCYCZ1P815QXoTiO3wucOmjSLVy-Ib&s=10" alt="Johnny Depp <3" width="500px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiwXjc_KB9h0cV0QND3wNoc0E5iwQCYCZ1P815QXoTiO3wucOmjSLVy-Ib&s=10" alt="Johnny Depp <3"id="Johnny-Depp">
         <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqRygzFBZL4Uc2X2RVx21uDfFFXRbMdol-dhd2PPwPtNULNcbeY9n8ktM&s=10" alt="Johnny Depp <3" width="500px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqRygzFBZL4Uc2X2RVx21uDfFFXRbMdol-dhd2PPwPtNULNcbeY9n8ktM&s=10" alt="Johnny Depp <3" id="Johnny-Deppp">
         <h1>JOHNNY DEPP <3</h1>
         <p>Images from: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqRygzFBZL4Uc2X2RVx21uDfFFXRbMdol-dhd2PPwPtNULNcbeY9n8ktM&s=10" target="_blank"> JOHNNY DEPPPPPPPPP</a></p>
         </div>S
