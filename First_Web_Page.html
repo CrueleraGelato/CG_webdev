@@ -3,50 +3,91 @@
     <head>
         <title>Physcopaths and Their Brains Function</title>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Fascinate+Inline&family=Nosifer&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Fascinate+Inline&family=Nosifer&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
         <style>
             body{
                 color:#1b6b75; 
                 background-color:rgba(163, 230, 241, 0.87);
                 border-radius: 4px;
-                font-size: 1em;
-            }
+                font-size: 2em;
+                font-family: "Sue Ellen Francisco", cursive;
+                font-weight: 400;
+                font-style: normal;
+                }
             h1{
                 color:rgba(7, 99, 105, 0.87);
                 text-decoration: underline;
                 text-align: center;
+                font-family: "Fascinate Inline", system-ui;
+                font-weight: 400;
+                font-style: normal;
             }
             h2{
                 color:rgba(4, 82, 82, 0.87);
+                font-family: "Fascinate Inline", system-ui;
+                font-weight: 400;
+                font-style: normal;
             }
-            
+            #index{
+                padding:20px;
+                margin:8px;
+                margin-left: 50px;
+            }
+            #flex-wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; 
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #images{
+                width: 450px;
+                margin: 8px;
+                margin-left: 50px;
+                border: solid 3px rgb(3, 69, 78)
+                
+            }
+            #CSS-grid{
+                display: flex;
+                
+            }
         </style> 
     </head>
     <body>
         <h1>Psychopaths:</h1>
-        <img src="https://cdn.mos.cms.futurecdn.net/e3VZtcLnD3ExmoEVWFyLdY.jpg" alt="The Brain" width="100px">
-        <h2>Index:</h2>
-        <ol type ="1"> 
-            <li>Index</li>
-            <li>About The Brain</li>
-            <li>Phsycopaths Brains</li>
-            <li>Damage to Psychpaths Brains</li>
-            <li>How to Spot a Psychopath</li>
-        </ol>
-        <h2>Source:</h2>
-        <p>Curtis to the book; The Psychopath Inside by James Fallon, it is a fantastic book about a neuroscientists personal journey to the dark side of the brain. While also getting information online and using diagrams from the internet.</p>
-        <img src="https://m.media-amazon.com/images/I/91EfL4YoRmL._AC_UF1000,1000_QL80_.jpg" alt="The Psychopath Inside" width="100px">
-        <p>Image is from: <a href="https://www.penguinrandomhouse.com/books/312993/the-psychopath-inside-by-james-fallon/" target="_blank"> The Psychopath Inside</a></p>
-        <h2>Content Warning:</h2>
-        <p>This webpage handles some very heavy themes like abuse, manitpulation, etc. I will not be talking about specific psychopathic killers or psychopaths other than James Fallon. James Fallon was never a psychopathic killers
-        and didn't even know he was a psychpath until he was 30--but more on that later. The reason abuse will be brought up is becuase that is one of the things people do that create a psychopath, plus anymore. If any of this content with trigger
-        you, please do not proceed. If you are seeking help please contact this website:</p>
-         <li><a href="https://cityattorney.lacity.gov/domestic-violence">Help on Abuse and Manipulation</a></li>
-        <h2>About the Author:</h2>
-        <p>My name is Carrera Galata, I am a 14 year old girl attending UCAS highschool. I grew up with a very loving family, and have a fantastic relationship with my siblings.
-        I love reading, drawing, skiing, dirtbike riding, playing guitar and--learning about psychopaths. I was raised in a household where my parents didn't want to hide anything from us, so 
-        I was a very young child when I learned about psychopaths and ever since i've been very curious. It has always fascinated me--not on what they did but why they did it. I was never the type of child to be told something and 
-        accepted it. I always want to learn why something happens, and how that might affect something else. </p> 
-        
-    
+        <div id="CSS-grid">
+            <h2>Index:</h2>
+            <div id="index"> 
+                <li>Index</li>
+                <li>About The Brain</li>
+                <li>Phsycopaths Brains</li>
+                <li>Damage to Psychpaths Brains</li>
+                <li>How to Spot a Psychopath</li>
+                </div>
+            <img id="images" src="https://cdn.mos.cms.futurecdn.net/e3VZtcLnD3ExmoEVWFyLdY.jpg" alt="The Brain">
+        </div>
+        <div id="flex-wrapper">
+            <h2>Source:</h2>
+            <p>Curtis to the book; The Psychopath Inside by James Fallon, it is a fantastic book about a neuroscientists personal journey to the dark side of the brain. While also getting information online and using diagrams from the internet.</p>
+            <div>
+                <img id="images" src="https://m.media-amazon.com/images/I/91EfL4YoRmL._AC_UF1000,1000_QL80_.jpg" alt="The Psychopath Inside">
+            </div>
+            <p>Image is from: <a href="https://www.penguinrandomhouse.com/books/312993/the-psychopath-inside-by-james-fallon/" target="_blank"> The Psychopath Inside</a></p>
+            <h2>Content Warning:</h2>
+            <p>This webpage handles some very heavy themes like abuse, manitpulation, etc. I will not be talking about specific psychopathic killers or psychopaths other than James Fallon. James Fallon was never a psychopathic killers
+            and didn't even know he was a psychpath until he was 30--but more on that later. The reason abuse will be brought up is becuase that is one of the things people do that create a psychopath, plus anymore. If any of this content with trigger
+            you, please do not proceed. If you are seeking help please contact this website:</p>
+            <li><a href="https://cityattorney.lacity.gov/domestic-violence">Help on Abuse and Manipulation</a></li>
+            <h2>About the Author:</h2>
+            <p>My name is Carrera Galata, I am a 14 year old girl attending UCAS highschool. I grew up with a very loving family, and have a fantastic relationship with my siblings.
+            I love reading, drawing, skiing, dirtbike riding, playing guitar and--learning about psychopaths. I was raised in a household where my parents didn't want to hide anything from us, so 
+            I was a very young child when I learned about psychopaths and ever since i've been very curious. It has always fascinated me--not on what they did but why they did it. I was never the type of child to be told something and 
+            accepted it. I always want to learn why something happens, and how that might affect something else. </p>
+        </div>
     </body>
 </html>
