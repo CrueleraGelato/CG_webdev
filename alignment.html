@@ -29,11 +29,15 @@
                 align-items: center;
                 flex-wrap: wrap;
             }
+            #Johnny-Depp{ 
+                width: 150px
+            }
     
         </style>
     </head>
     <body> 
         <h1> Alignment notes</h1>
+        <img onmouseout = changeImage() src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiwXjc_KB9h0cV0QND3wNoc0E5iwQCYCZ1P815QXoTiO3wucOmjSLVy-Ib&s=10" alt="Johnny Depp <3"id="Johnny-Depp">
         <div id="box-wrapper">
             <div id="box" onmouseover="dissapear()" onmouseout="appear()">
                 <p>Box 1</p>
@@ -67,6 +71,14 @@
         <button onClick="color()">CLick Me</button>
         <button id="showmMore" onClick="show()">Show More</button>
         <script>
+            let images = ["https://cdn.mos.cms.futurecdn.net/e3VZtcLnD3ExmoEVWFyLdY.jpg", "https://m.media-amazon.com/images/I/91EfL4YoRmL._AC_UF1000,1000_QL80_.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqRygzFBZL4Uc2X2RVx21uDfFFXRbMdol-dhd2PPwPtNULNcbeY9n8ktM&s=10", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiwXjc_KB9h0cV0QND3wNoc0E5iwQCYCZ1P815QXoTiO3wucOmjSLVy-Ib&s=10"]
+            let current = 0
+            function changeImage(){
+                current += 1 
+                if (current > 3){
+                    current = 0}
+                document.getElementById("Johnny-Depp").src = images[current]
+            }
             function color(){
                 let newColor= document.getElementById("colorPicker").value
                 document.getElementById("box").style.backgroundColor =newColor
