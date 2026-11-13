@@ -39,7 +39,7 @@
                 margin-left: 50px;
             }
             #flex-wrapper{
-                display: flex;
+                display: none;
                 flex-direction: column;
                 justify-content: space-between; 
                 align-items: center;
@@ -56,6 +56,15 @@
                 display: flex;
                 
             }
+            #flex-wrapper{
+                display: none;
+            }
+            #button{ 
+                color:rgba(4, 82, 82, 0.87);
+                font-family: "Fascinate Inline", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
         </style> 
     </head>
     <body>
@@ -69,9 +78,9 @@
                 <li>Damage to Psychpaths Brains</li>
                 <li>How to Spot a Psychopath</li>
                 </div>
-            <img id="images" src="https://cdn.mos.cms.futurecdn.net/e3VZtcLnD3ExmoEVWFyLdY.jpg" alt="The Brain">
+            <img onmouseout = changeImage() id="images" src="https://cdn.mos.cms.futurecdn.net/e3VZtcLnD3ExmoEVWFyLdY.jpg" alt="The Brain">
         </div>
-        <div id="flex-wrapper">
+        <div>
             <h2>Source:</h2>
             <p>Curtis to the book; The Psychopath Inside by James Fallon, it is a fantastic book about a neuroscientists personal journey to the dark side of the brain. While also getting information online and using diagrams from the internet.</p>
             <div>
@@ -83,11 +92,34 @@
             and didn't even know he was a psychpath until he was 30--but more on that later. The reason abuse will be brought up is becuase that is one of the things people do that create a psychopath, plus anymore. If any of this content with trigger
             you, please do not proceed. If you are seeking help please contact this website:</p>
             <li><a href="https://cityattorney.lacity.gov/domestic-violence">Help on Abuse and Manipulation</a></li>
-            <h2>About the Author:</h2>
-            <p>My name is Carrera Galata, I am a 14 year old girl attending UCAS highschool. I grew up with a very loving family, and have a fantastic relationship with my siblings.
-            I love reading, drawing, skiing, dirtbike riding, playing guitar and--learning about psychopaths. I was raised in a household where my parents didn't want to hide anything from us, so 
-            I was a very young child when I learned about psychopaths and ever since i've been very curious. It has always fascinated me--not on what they did but why they did it. I was never the type of child to be told something and 
-            accepted it. I always want to learn why something happens, and how that might affect something else. </p>
+            <div id="flex-wrapper">
+                <h2>About the Author:</h2>
+                <p>My name is Carrera Galata, I am a 14 year old girl attending UCAS highschool. I grew up with a very loving family, and have a fantastic relationship with my siblings.
+                I love reading, drawing, skiing, dirtbike riding, playing guitar and--learning about psychopaths. I was raised in a household where my parents didn't want to hide anything from us, so 
+                I was a very young child when I learned about psychopaths and ever since i've been very curious. It has always fascinated me--not on what they did but why they did it. I was never the type of child to be told something and 
+                accepted it. I always want to learn why something happens, and how that might affect something else. </p>
+            </div>
         </div>
+        <button onClick="show()" id="button">Show About the Author</button>
+        <script>
+            let images = ["https://cdn.britannica.com/72/74272-050-A44DE01A/view-hemisphere-lobes-human-brain-skull-convolutions.jpg", "https://atlantabrainandspine.com/wp-content/uploads/2016/12/brain_portions_illus20.jpg", "https://cdn.mos.cms.futurecdn.net/e3VZtcLnD3ExmoEVWFyLdY.jpg"]
+            let current = 0
+            function changeImage(){
+                current += 1 
+                if (current > 2){
+                    current = 0}
+                document.getElementById("images").src = images[current]
+            }
+            function show(){
+                let element= document.getElementById("flex-wrapper")
+                if (element.style.display == "flex")
+                    {elements.style.display = "none" 
+                    document.getElementById("button").innerHTML = "Show About the Author"
+                }else{
+                    element.style.display = "flex" 
+                    document.getElementById("button").innerHTML = "Stop showing About the Author"
+                }
+            }
+        </script>
     </body>
 </html>
