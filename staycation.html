@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Physcopaths and Their Brains Function</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Fascinate+Inline&family=Nosifer&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Fascinate+Inline&family=Nosifer&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+        <style>
+            body{
+                color:#810000; 
+                background-color:rgba(236, 178, 71, 0.87);
+                border-radius: 4px;
+                font-size: 2em;
+                font-family: "Sue Ellen Francisco", cursive;
+                font-weight: 400;
+                font-style: normal;
+                flex-wrap: wrap;
+                }
+            h1{
+                color:rgba(100, 6, 6, 0.87);
+                text-decoration: underline;
+                text-align: center;
+                font-family: "Fascinate Inline", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
+            h2{
+                color:rgba(99, 24, 6, 0.87);
+                font-family: "Fascinate Inline", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
+            #index{
+                padding:20px;
+                margin:8px;
+                margin-left: 50px;
+            }
+            #flex-wrapper{
+                display: none;
+                flex-direction: column;
+                justify-content: space-between; 
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            #images{
+                width: 450px;
+                margin: 8px;
+                margin-left: 75px;
+                border: solid 5px rgb(73, 43, 9);
+                flex-wrap: wrap;
+                
+            }
+            #CSS-grid{
+                display: flex;
+                
+            }
+            #flex-wrapper{
+                flex: none;
+            }
+            #button{ 
+                color:rgba(90, 8, 29, 0.87);
+                font-family: "Fascinate Inline", system-ui;
+                font-weight: 400;
+                font-style: normal;
+            }
+        </style> 
+    </head>
+    <body>
+        <h1>Sundance Resort</h1>
+        <h3>Why Should You Come Here?:</h2>
+        <div id="CSS-grid">
+            <div id="index"> 
+                <li>Secluded Forest Privacy with Resort Proximity</li>
+                <li>Residential Comforts and Space to Unwinde</li>
+                <li>Effortless Four-Seaon Adventure</li>
+                <li>Atstic Heritage and Wellness Perks</li>
+                </div>
+            <img onmouseout = changeImage() id="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu_ebetml5N9ecfZ_mxhLz-XlRi2ycefq-jm2caNBEm3D1c4M5_h48blaF&s=10" alt="The Cabins">
+        </div>
+        <div>
+                <img id="images" src="https://www.skiutah.com/files/subblob/blog/images.listing/8r4h9FQAYLA7D9s26xPnA6" alt="The mountain">
+            </div>
+            <p id="flex-wrapper">Sundance resort is such a beautiful place to stay, the wood cabins and warm cozy feeling of winter makes you feel at home.  You will never be bored as just ten minutes outside you can come and ski on the best snow on earth! Sundance provides a resturant to eat your lunch, and skiing lessons if you want to learn. If cold isn't your cup of tea, they also allow for you to come during the summer, going to music festivals and watching plays is also an fantastic option. </p>
+        </div>
+        <button onClick="show()" id="button">Show the Description</button>
+        <script>
+            let images = ["https://www.sundanceresort.com/site/assets/files/9063/dsc07339-scaled-2400x0-c-default-1.1000x745.webp" , "https://img.bookonthebrightside.com/parksideresort/large/5735.jpg" , "https://www.skiutah.com/files/subblob/blog/images.listing/8r4h9FQAYLA7D9s26xPnA6"]
+            let current = 0
+            function changeImage(){
+                current += 1 
+                if (current > 2){
+                    current = 0}
+                document.getElementById("images").src = images[current]
+            }
+            function show(){
+                let element= document.getElementById("flex-wrapper")
+                if (element.style.display == "flex"){
+                    element.style.display = "none" 
+                    document.getElementById("button").innerHTML = "Show The Descripton"
+                }else{
+                    element.style.display = "flex" 
+                    document.getElementById("button").innerHTML = "Stop showing the Description"
+                }
+            }
+        </script>
+    </body>
+</html>
