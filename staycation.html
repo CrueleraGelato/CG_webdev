@@ -19,6 +19,7 @@
                 font-weight: 400;
                 font-style: normal;
                 flex-wrap: wrap;
+                margin: 25px
                 }
             h1{
                 color:rgba(100, 6, 6, 0.87);
@@ -37,7 +38,7 @@
             #index{
                 padding:20px;
                 margin:8px;
-                margin-left: 50px;
+                margin-left: 70px;
             }
             #flex-wrapper{
                 display: none;
@@ -45,11 +46,12 @@
                 justify-content: space-between; 
                 align-items: center;
                 flex-wrap: wrap;
+                
             }
             #images{
-                width: 450px;
-                margin: 8px;
-                margin-left: 75px;
+                width: 500px;
+                margin: 0px;
+                margin-left: 100px;
                 border: solid 5px rgb(73, 43, 9);
                 flex-wrap: wrap;
                 
@@ -58,20 +60,36 @@
                 display: flex;
                 
             }
-            #flex-wrapper{
-                flex: none;
-            }
             #button{ 
                 color:rgba(90, 8, 29, 0.87);
                 font-family: "Fascinate Inline", system-ui;
                 font-weight: 400;
                 font-style: normal;
             }
+            #mountain{
+                width: 500px;
+                margin: 0px;
+                margin-left: 40px;
+                border: solid 5px rgb(73, 43, 9);
+                flex-wrap: wrap;
+                flex: none;
+                
+            }
+            #snow{
+                width: 1000px;
+                margin: 0px;
+                margin-left: 40px;
+                border: solid 5px rgb(73, 43, 9);
+                flex-wrap: wrap;
+                flex: none;
+                
+            }
+        
         </style> 
     </head>
     <body>
         <h1>Sundance Resort</h1>
-        <h3>Why Should You Come Here?:</h2>
+        <h3>Why Should You Come Here?:</h3>
         <div id="CSS-grid">
             <div id="index"> 
                 <li>Secluded Forest Privacy with Resort Proximity</li>
@@ -79,16 +97,25 @@
                 <li>Effortless Four-Seaon Adventure</li>
                 <li>Atstic Heritage and Wellness Perks</li>
                 </div>
-            <img onmouseout = changeImage() id="images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu_ebetml5N9ecfZ_mxhLz-XlRi2ycefq-jm2caNBEm3D1c4M5_h48blaF&s=10" alt="The Cabins">
-        </div>
-        <div>
-            <img id="images" src="https://www.skiutah.com/files/subblob/blog/images.listing/8r4h9FQAYLA7D9s26xPnA6" alt="The mountain">
+            <img onmouseout = changeImage() id="images" src="https://www.sundanceresort.com/site/assets/files/9063/dsc07339-scaled-2400x0-c-default-1.1000x745.webp" alt="The Cabins">
             </div>
-            <p id="flex-wrapper">Sundance resort is such a beautiful place to stay, the wood cabins and warm cozy feeling of winter makes you feel at home.  You will never be bored as just ten minutes outside you can come and ski on the best snow on earth! Sundance provides a resturant to eat your lunch, and skiing lessons if you want to learn. If cold isn't your cup of tea, they also allow for you to come during the summer, going to music festivals and watching plays is also an fantastic option. </p>
+        <h3>What Activites Can You Do?</h3>
+        <div id="CSS-grid">
+            <img id= "mountain" src="https://www.stewartmountainlodging.com/wp-content/uploads/2026/05/hero-mountain_through_trees.jpg" alt="Mountains">
+            <div id="index"> 
+                <li>Sundance zip tour</li>
+                <li>Hiking To Stewart Falls</li>
+                <li>Lift-served Mountain Biking</li>
+                <li>Ski or Snowboard Down The Mountains</li>
+            </div>
+        </div>
+        <div id="flex-wrapper">
+            <p>Sundance resort is such a beautiful place to stay, the wood cabins and warm cozy feeling of winter makes you feel at home.  You will never be bored as just ten minutes outside you can come and ski on the best snow on earth! Sundance provides a resturant to eat your lunch, and skiing lessons if you want to learn. If cold isn't your cup of tea, they also allow for you to come during the summer, going to music festivals and watching plays is also an fantastic option. </p>
+            <img id="snow" src="https://www.skiutah.com/files/subblob/blog/images.listing/8r4h9FQAYLA7D9s26xPnA6" alt="The mountain">
         </div>
         <button onClick="show()" id="button">Show the Description</button>
         <script>
-            let images = ["https://www.sundanceresort.com/site/assets/files/9063/dsc07339-scaled-2400x0-c-default-1.1000x745.webp" , "https://img.bookonthebrightside.com/parksideresort/large/5735.jpg" , "https://www.skiutah.com/files/subblob/blog/images.listing/8r4h9FQAYLA7D9s26xPnA6"]
+            let images = ["https://www.sundanceresort.com/site/assets/files/11332/dsc07547-scaled-2400x0-c-default-1.1000x745.jpg", "https://www.sundanceresort.com/site/assets/files/11327/2019_standard-3fr-2400x0-c-default.1000x745.webp" , "https://www.sundanceresort.com/site/assets/files/9063/dsc07339-scaled-2400x0-c-default-1.1000x745.webp"]
             let current = 0
             function changeImage(){
                 current += 1 
